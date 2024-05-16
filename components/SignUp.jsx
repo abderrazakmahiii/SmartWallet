@@ -8,7 +8,7 @@ const SignUp = () => {
   const [termsChecked, setTermsChecked] = useState(false);
   const [date, setDate] = useState(new Date());
   const [showPicker, setShowPicker] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -85,7 +85,7 @@ const SignUp = () => {
       return;
     }
     // If all validations pass, proceed with signup
-    setError(null);
+    setError('');
     // Implement your signup logic here
   };
 
@@ -115,7 +115,7 @@ const SignUp = () => {
           <TextInput
             placeholder="First Name"
             placeholderTextColor="#ccc"
-            style={[styles.inputName, error && !firstName.trim() ? styles.errorBorder : null]}
+            style={[styles.inputName, error !== '' && !firstName.trim() ? styles.errorBorder : null]}
             keyboardType="default"
             autoCapitalize="words"
             onChangeText={text => setFirstName(text)}
@@ -123,50 +123,50 @@ const SignUp = () => {
           <TextInput
             placeholder="Last Name"
             placeholderTextColor="#ccc"
-            style={[styles.inputName, error && !lastName.trim() ? styles.errorBorder : null]}
+            style={[styles.inputName, error !== '' && !lastName.trim() ? styles.errorBorder : null]}
             keyboardType="default"
             autoCapitalize="words"
             onChangeText={text => setLastName(text)}
           />
-          <MaterialIcons name="badge" size={24} color="white" style={{position: 'absolute', right: 10, marginRight: 5}} />
+          <MaterialIcons name="badge" size={24} color="white" style={styles.iconRight} />
         </View>
         <View style={styles.fieldContainer}>
           <TextInput
             placeholder="Email Address"
             placeholderTextColor="#ccc"
-            style={[styles.fieldInput, error && (!email.trim() || !/\S+@\S+\.\S+/.test(email)) ? styles.errorBorder : null]}
+            style={[styles.fieldInput, error !== '' && (!email.trim() || !/\S+@\S+\.\S+/.test(email)) ? styles.errorBorder : null]}
             keyboardType="email-address"
             autoCapitalize="none"
             onChangeText={text => setEmail(text)}
           />
-          <MaterialIcons name="mail" size={24} color="white" style={{position: 'absolute', right: 10, marginRight: 15}} />
+          <MaterialIcons name="mail" size={24} color="white" style={styles.iconLeft} />
         </View>
         <View style={styles.fieldContainer}>
           <TextInput
             placeholder="Phone number"
             placeholderTextColor="#ccc"
-            style={[styles.fieldInput, error && !phone.trim() ? styles.errorBorder : null]}
+            style={[styles.fieldInput, error !== '' && !phone.trim() ? styles.errorBorder : null]}
             keyboardType="number-pad"
             autoCapitalize="none"
             onChangeText={text => setPhone(text)}
           />
-          <MaterialIcons name="phone" size={24} color="white" style={{position: 'absolute', right: 10, marginRight: 15}} />
+          <MaterialIcons name="phone" size={24} color="white" style={styles.iconLeft} />
         </View>
         <View style={styles.fieldContainer}>
           <TextInput
             placeholder="Address"
             placeholderTextColor="#ccc"
-            style={[styles.fieldInput, error && !address.trim() ? styles.errorBorder : null]}
+            style={[styles.fieldInput, error !== '' && !address.trim() ? styles.errorBorder : null]}
             keyboardType="default"
             autoCapitalize="none"
             onChangeText={text => setAddress(text)}
           />
-          <MaterialIcons name="location-on" size={24} color="white" style={{position: 'absolute', right: 10, marginRight: 15}} />
+          <MaterialIcons name="location-on" size={24} color="white" style={styles.iconLeft} />
         </View>
         <View style={styles.fieldContainer}>
-          <TouchableOpacity onPress={toggleDatePicker} style={[styles.datePicker, error && getFormattedDate(date) === 'Birthdate' ? styles.errorBorder : null]}>
-            <Text style={{ color: "white" }}>{getFormattedDate(date)}</Text>
-            <MaterialIcons name="calendar-today" size={24} color="white" style={{position: 'absolute', right: 10}} />
+          <TouchableOpacity onPress={toggleDatePicker} style={[styles.datePicker, error !== '' && getFormattedDate(date) === 'Birthdate' ? styles.errorBorder : null]}>
+            <Text style={{ color: "white" }}>{date ? getFormattedDate(date) : "Birthdate"}</Text>
+            <MaterialIcons name="calendar-today" size={24} color="white" style={styles.iconLeft} />
           </TouchableOpacity>
           {showPicker && (
             <DatePicker
@@ -184,12 +184,12 @@ const SignUp = () => {
           <TextInput
             placeholder="Password"
             placeholderTextColor="#ccc"
-            style={[styles.fieldInput, error && (!password.trim() || !/(?=.*\d)(?=.*[A-Z])(?=.*\W)/.test(password)) ? styles.errorBorder : null]}
+            style={[styles.fieldInput, error !== '' && (!password.trim() || !/(?=.*\d)(?=.*[A-Z])(?=.*\W)/.test(password)) ? styles.errorBorder : null]}
             secureTextEntry={secureTextEntry}
             autoCapitalize="none"
             onChangeText={text => setPassword(text)}
           />
-          <TouchableOpacity onPress={updateSecureTextEntry} style={{position: 'absolute', right: 30}}>
+          <TouchableOpacity onPress={updateSecureTextEntry} style={styles.iconRight}>
             {secureTextEntry ?
               <MaterialIcons name="visibility-off" size={24} color="white" />
               :
@@ -201,12 +201,12 @@ const SignUp = () => {
           <TextInput
             placeholder="Confirm Password"
             placeholderTextColor="#ccc"
-            style={[styles.fieldInput, error && (password.trim() !== confirmPassword.trim()) ? styles.errorBorder : null]}
+            style={[styles.fieldInput, error !== '' && (password.trim() !== confirmPassword.trim()) ? styles.errorBorder : null]}
             secureTextEntry={confirmSecureTextEntry}
             autoCapitalize="none"
             onChangeText={text => setConfirmPassword(text)}
           />
-          <TouchableOpacity onPress={updateConfirmSecureTextEntry} style={{position: 'absolute', right: 30}}>
+          <TouchableOpacity onPress={updateConfirmSecureTextEntry} style={styles.iconRight}>
             {confirmSecureTextEntry ?
               <MaterialIcons name="visibility-off" size={24} color="white" />
               :
@@ -233,7 +233,7 @@ const SignUp = () => {
           </TouchableOpacity>
           <Text style={styles.checkboxText}>I agree to the terms and conditions</Text>
         </View>
-        {error && <Text style={styles.errorText}>{error}</Text>}
+        {error !== '' && <Text style={styles.errorText}>{error}</Text>}
         {/* Sign up button with arrow */}
         <TouchableOpacity style={styles.signUpButton} onPress={handleSignUp}>
           <Text style={styles.signUpButtonText}>Sign Up</Text>
@@ -367,8 +367,15 @@ const styles = StyleSheet.create({
   },
   iconRight: {
     position: 'absolute',
+    right: 0,
     color: 'white',
     marginRight: 15,
+  },
+  iconLeft: {
+    position: 'absolute',
+    left: 0,
+    color: 'white',
+    marginLeft: 15,
   },
 });
 

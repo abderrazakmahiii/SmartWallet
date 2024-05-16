@@ -16,8 +16,17 @@ const EmailPhoneConfirmation = ({ navigation }) => {
   const [emailResendTimer, setEmailResendTimer] = useState(60);
   const [phoneResendDisabled, setPhoneResendDisabled] = useState(true);
   const [phoneResendTimer, setPhoneResendTimer] = useState(60);
+  const [emailCode1, setEmailCode1] = useState('');
+  const [emailCode2, setEmailCode2] = useState('');
+  const [emailCode3, setEmailCode3] = useState('');
+  const [emailCode4, setEmailCode4] = useState('');
+  const [phoneCode1, setPhoneCode1] = useState('');
+  const [phoneCode2, setPhoneCode2] = useState('');
+  const [phoneCode3, setPhoneCode3] = useState('');
+  const [phoneCode4, setPhoneCode4] = useState('');
 
-  const handleOnChangeText = (text, inputRef, prevInputRef) => {
+  const handleOnChangeText = (text, inputRef, prevInputRef, setState) => {
+    setState(text);
     if (text.length === 0 && prevInputRef && prevInputRef.current) {
       prevInputRef.current.focus();
     } else if (text.length === 1 && inputRef && inputRef.current) {
@@ -81,7 +90,8 @@ const EmailPhoneConfirmation = ({ navigation }) => {
             placeholderTextColor="white"
             keyboardType="numeric"
             maxLength={1}
-            onChangeText={(text) => handleOnChangeText(text, emailCode2Ref, null)}
+            onChangeText={(text) => handleOnChangeText(text, emailCode2Ref, null, setEmailCode1)}
+            value={emailCode1}
           />
           <TextInput
             ref={emailCode2Ref}
@@ -90,7 +100,8 @@ const EmailPhoneConfirmation = ({ navigation }) => {
             placeholderTextColor="white"
             keyboardType="numeric"
             maxLength={1}
-            onChangeText={(text) => handleOnChangeText(text, emailCode3Ref, emailCode1Ref)}
+            onChangeText={(text) => handleOnChangeText(text, emailCode3Ref, emailCode1Ref, setEmailCode2)}
+            value={emailCode2}
           />
           <TextInput
             ref={emailCode3Ref}
@@ -99,7 +110,8 @@ const EmailPhoneConfirmation = ({ navigation }) => {
             placeholderTextColor="white"
             keyboardType="numeric"
             maxLength={1}
-            onChangeText={(text) => handleOnChangeText(text, emailCode4Ref, emailCode2Ref)}
+            onChangeText={(text) => handleOnChangeText(text, emailCode4Ref, emailCode2Ref, setEmailCode3)}
+            value={emailCode3}
           />
           <TextInput
             ref={emailCode4Ref}
@@ -108,7 +120,8 @@ const EmailPhoneConfirmation = ({ navigation }) => {
             placeholderTextColor="white"
             keyboardType="numeric"
             maxLength={1}
-            onChangeText={(text) => handleOnChangeText(text, null, emailCode3Ref)}
+            onChangeText={(text) => handleOnChangeText(text, null, emailCode3Ref, setEmailCode4)}
+            value={emailCode4}
           />
         </View>
         <TouchableOpacity
@@ -141,7 +154,8 @@ const EmailPhoneConfirmation = ({ navigation }) => {
             placeholderTextColor="white"
             keyboardType="numeric"
             maxLength={1}
-            onChangeText={(text) => handleOnChangeText(text, phoneCode2Ref, null)}
+            onChangeText={(text) => handleOnChangeText(text, phoneCode2Ref, null, setPhoneCode1)}
+            value={phoneCode1}
           />
           <TextInput
             ref={phoneCode2Ref}
@@ -150,7 +164,8 @@ const EmailPhoneConfirmation = ({ navigation }) => {
             placeholderTextColor="white"
             keyboardType="numeric"
             maxLength={1}
-            onChangeText={(text) => handleOnChangeText(text, phoneCode3Ref, phoneCode1Ref)}
+            onChangeText={(text) => handleOnChangeText(text, phoneCode3Ref, phoneCode1Ref, setPhoneCode2)}
+            value={phoneCode2}
           />
           <TextInput
             ref={phoneCode3Ref}
@@ -159,7 +174,8 @@ const EmailPhoneConfirmation = ({ navigation }) => {
             placeholderTextColor="white"
             keyboardType="numeric"
             maxLength={1}
-            onChangeText={(text) => handleOnChangeText(text, phoneCode4Ref, phoneCode2Ref)}
+            onChangeText={(text) => handleOnChangeText(text, phoneCode4Ref, phoneCode2Ref, setPhoneCode3)}
+            value={phoneCode3}
           />
           <TextInput
             ref={phoneCode4Ref}
@@ -168,7 +184,8 @@ const EmailPhoneConfirmation = ({ navigation }) => {
             placeholderTextColor="white"
             keyboardType="numeric"
             maxLength={1}
-            onChangeText={(text) => handleOnChangeText(text, null, phoneCode3Ref)}
+            onChangeText={(text) => handleOnChangeText(text, null, phoneCode3Ref, setPhoneCode4)}
+            value={phoneCode4}
           />
         </View>
         <TouchableOpacity

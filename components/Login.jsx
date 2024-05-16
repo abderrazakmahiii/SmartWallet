@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, StyleSheet, TouchableHighlight } from 'react-native';
+import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const Login = () => {
@@ -30,9 +30,9 @@ const Login = () => {
         value={usernameOrEmail}
         onChangeText={text => setUsernameOrEmail(text)}
         placeholder="Email or phone number"
-        style={[styles.textInput, error && !usernameOrEmail.trim() ? styles.errorBorder : null]}
+        style={[styles.textInput, error && !usernameOrEmail.trim() && styles.errorBorder]}
       />
-      <View style={[styles.passwordContainer, error && !password.trim() ? styles.errorBorder : null]}>
+      <View style={[styles.passwordContainer, error && !password.trim() && styles.errorBorder]}>
         <TextInput
           value={password}
           onChangeText={text => setPassword(text)}
@@ -49,21 +49,22 @@ const Login = () => {
         />
       </View>
       {error ? <Text style={styles.errorText}>{error}</Text> : null}
-      <TouchableHighlight 
+      <TouchableOpacity
         style={styles.forgotPassword}
         onPress={() => console.log('Forgot Password')}
-        underlayColor="transparent"
       >
         <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
-      </TouchableHighlight>
-      <TouchableHighlight 
+      </TouchableOpacity>
+      <TouchableOpacity
         style={styles.button}
         onPress={handleLogin}
-        underlayColor="#6F00D2" // Change the underlay color to give feedback when pressed
       >
         <Text style={styles.buttonText}>Log In</Text>
-      </TouchableHighlight>
-      <Text style={styles.signupText}>Don't have an account yet? <Text style={styles.registerText}>Register</Text></Text>
+      </TouchableOpacity>
+      <Text style={styles.signupText}>
+        Don't have an account yet? 
+        <Text style={styles.registerText}> Register</Text>
+      </Text>
     </View>
   );
 };
@@ -82,7 +83,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     color: 'white',
   },
-  subTitle : {
+  subTitle: {
     color: '#484747',
     fontSize: 20,
     fontWeight: 'bold',
@@ -107,10 +108,10 @@ const styles = StyleSheet.create({
   },
   forgotPassword: {
     marginBottom: 20,
+    alignSelf: 'flex-end', // Align the link to the right
   },
   forgotPasswordText: {
     color: '#ccc',
-    textAlign: 'right',
   },
   button: {
     paddingHorizontal: 20,
@@ -129,6 +130,7 @@ const styles = StyleSheet.create({
   },
   signupText: {
     color: 'white',
+    textAlign: 'center', // Center align the text
   },
   registerText: {
     color: '#8000FF',
@@ -139,6 +141,7 @@ const styles = StyleSheet.create({
   },
   errorBorder: {
     borderColor: 'red',
+    borderWidth: 1,
   },
 });
 
