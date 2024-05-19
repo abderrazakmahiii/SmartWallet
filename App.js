@@ -7,6 +7,11 @@ import SignUpScreen from './screens/SignUpScreen';
 import EmailPhoneConfirmationScreen from './screens/EmailPhoneConfirmationScreen';
 import SetPinCodeScreen from './screens/SetPinCodeScreen'; 
 import HomeScreen from './screens/HomeScreen';
+import AddCardScreen from './screens/AddCardScreen'; // Import the AddCardScreen component
+import ProfileScreen from './screens/ProfileScreen';
+import ContactsScreen from './screens/ContactScreen';
+import AddContactScreen from './screens/AddContactScreen';
+import ContactDetailScreen from './screens/ContactDetailScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,9 +21,30 @@ const App = () => {
       <Stack.Navigator>
         {/* <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
         <Stack.Screen name="SignUp" component={SignUpScreen} options={{ headerShown: false }} />
-        <Stack.Screen name="Confirmation" component={EmailPhoneConfirmationScreen} options={{ headerShown: false }} /> */}
-        {/* <Stack.Screen name="SetPinCode" component={SetPinCodeScreen} options={{ headerShown: false }} /> */}
-        <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="Confirmation" component={EmailPhoneConfirmationScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="SetPinCode" component={SetPinCodeScreen} options={{ headerShown: false }} />*/}
+        {/* <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />  */}
+        {/* <Stack.Screen name="AddCard" component={AddCardScreen} options={{ headerShown: false }} />  */}
+        {/* <Stack.Screen
+          name="Profile"
+          component={ProfileScreen}
+          options={{ headerShown: false }}
+        /> */}
+        {/* <Stack.Screen
+          name="Contacts"
+          component={ContactsScreen}
+          options={{ headerShown: false }}
+        /> */}
+        {/* <Stack.Screen
+          name="AddContact"
+          component={AddContactScreen}
+          options={{ headerShown: false }}
+        /> */}
+        <Stack.Screen
+          name="ContactDetail"
+          component={ContactDetailScreen}
+          options={{ headerShown: false }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
