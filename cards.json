@@ -1,0 +1,44 @@
+[
+    {
+        "number": "1234 5678 9012 3456",
+        "type": "Mastercard",
+        "expiration": "12/24",
+        "lastRefresh": "Today at 23:09",
+        "balance": "€1,234.56"
+    },
+    {
+        "number": "9876 5432 1098 7654",
+        "type": "Visa",
+        "expiration": "05/23",
+        "lastRefresh": "Today at 12:30",
+        "balance": "€3,456.78"
+    },
+    {
+        "number": "4567 8901 2345 6789",
+        "type": "Mastercard",
+        "expiration": "09/25",
+        "lastRefresh": "Yesterday at 10:15",
+        "balance": "€7,890.12"
+    },
+    {
+        "number": "4567 1234 5678 9012",
+        "type": "Visa",
+        "expiration": "11/24",
+        "lastRefresh": "Today at 09:45",
+        "balance": "€9,876.54"
+    },
+    {
+        "number": "7654 3210 9876 5432",
+        "type": "American Express",
+        "expiration": "07/22",
+        "lastRefresh": "Today at 15:20",
+        "balance": "€5,432.10"
+    },
+    {
+        "number": "5432 1098 7654 3210",
+        "type": "Visa",
+        "expiration": "03/23",
+        "lastRefresh": "Today at 08:00",
+        "balance": "€2,345.67"
+    }
+]
