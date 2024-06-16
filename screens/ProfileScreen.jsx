@@ -1,4 +1,3 @@
-// screens/ProfileScreen.jsx
 import React from 'react';
 import Profile from '../components/Profile';
 import NavigationBar from '../components/NavigationBar';

@@ -1,4 +1,3 @@
-// screens/SetPinCodeScreen.jsx
 import React from 'react';
 import SetPinCode from '../components/SetPinCode';
 

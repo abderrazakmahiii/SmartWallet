@@ -3,7 +3,7 @@ import { View, Image, StyleSheet, TouchableOpacity, Text, TextInput } from 'reac
 import { MaterialIcons } from '@expo/vector-icons';
 
 const EmailPhoneConfirmation = ({ navigation }) => {
-  const imagePath = require('../imgs/confirm.png'); // Assuming the image is in the imgs folder
+  const imagePath = require('../imgs/confirm.png');
   const emailCode1Ref = useRef(null);
   const emailCode2Ref = useRef(null);
   const emailCode3Ref = useRef(null);
@@ -70,7 +70,6 @@ const EmailPhoneConfirmation = ({ navigation }) => {
       <Text style={styles.description}>
         Please enter the 4 digits codes sent to your email and phone number.
       </Text>
-      {/* Email verification input fields */}
       <View style={styles.inputContainer}>
         <Text style={styles.inputLabel}>Email Code</Text>
         <View style={styles.codeContainer}>
@@ -130,7 +129,6 @@ const EmailPhoneConfirmation = ({ navigation }) => {
           </Text>
         </TouchableOpacity>
       </View>
-      {/* Phone verification input fields */}
       <View style={styles.inputContainer}>
         <Text style={styles.inputLabel}>Phone Code</Text>
         <View style={styles.codeContainer}>
@@ -190,7 +188,6 @@ const EmailPhoneConfirmation = ({ navigation }) => {
           </Text>
         </TouchableOpacity>
       </View>
-      {/* Continue button */}
       <TouchableOpacity style={styles.continueButton}>
         <Text style={styles.continueText}>Continue</Text>
         <MaterialIcons name="arrow-forward" size={24} color="#8000FF" style={styles.arrowIcon} />
@@ -209,7 +206,7 @@ const styles = StyleSheet.create({
   image: {
     width: 200,
     height: 200,
-    marginBottom: 20, // Add some margin below the image
+    marginBottom: 20, 
   },
   backButton: {
     position: 'absolute',
@@ -225,9 +222,9 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 14,
-    color: '#ccc', // Light gray color for the description
-    textAlign: 'center', // Center align the text
-    marginBottom: 20, // Add some margin below the description
+    color: '#ccc',
+    textAlign: 'center',
+    marginBottom: 20,
   },
   inputContainer: {
     marginBottom: 20,

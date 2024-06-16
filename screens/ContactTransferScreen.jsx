@@ -1,4 +1,3 @@
-// ContactTransferScreen.jsx
 import React, { useState } from 'react';
 import { View, StyleSheet, TouchableOpacity, Text } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';

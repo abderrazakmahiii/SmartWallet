@@ -29,7 +29,6 @@ const PasswordRecovering = () => {
 
   const handleSubmit = () => {
     if (validateForm()) {
-      // Logic to handle password recovery
       console.log('Password recovery successful');
     }
   };
@@ -130,10 +129,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginBottom: 50,
-    width: '100%', // Adjust to fit the input fields properly
+    width: '100%', 
   },
   codeInput: {
-    width: '14%', // Adjust to ensure all inputs fit within the container
+    width: '14%',
     height: 55,
     paddingHorizontal: 10,
     backgroundColor: '#333',

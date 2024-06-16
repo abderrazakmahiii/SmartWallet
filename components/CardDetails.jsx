@@ -1,4 +1,3 @@
-// components/CardDetails.jsx
 import React, { useRef, useEffect } from 'react';
 import { View, Text, StyleSheet, ImageBackground, Image, Animated } from 'react-native';
 

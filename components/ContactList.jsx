@@ -1,4 +1,3 @@
-// components/ContactList.jsx
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
@@ -29,8 +28,8 @@ const styles = StyleSheet.create({
   },
   textContainer: {
     marginLeft: 20,
-    flex: 1, // Take remaining space
-    justifyContent: 'center', // Center vertically
+    flex: 1, 
+    justifyContent: 'center', 
   },
   name: {
     fontSize: 24,
@@ -39,7 +38,7 @@ const styles = StyleSheet.create({
   },
   phone: {
     fontSize: 16,
-    color: '#BBBBBB', // Light text color
+    color: '#BBBBBB', 
   },
 });
 

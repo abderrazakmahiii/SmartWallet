@@ -1,9 +1,9 @@
 import React from 'react';
-import EmailPhoneConfirmation from '../components/EmailPhoneConfirmation'; // Assuming EmailPhoneConfirmation.jsx is in the same directory
+import EmailPhoneConfirmation from '../components/EmailPhoneConfirmation';
 
 const EmailPhoneConfirmationScreen = () => {
   return (
-    <EmailPhoneConfirmation /> // Pass navigation prop
+    <EmailPhoneConfirmation /> 
   );
 };
 

@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { View, StyleSheet, Image, TouchableOpacity, TextInput, Text } from 'react-native'; // Import Text
+import { View, StyleSheet, Image, TouchableOpacity, TextInput, Text } from 'react-native'; 
 import { AntDesign } from '@expo/vector-icons';
 
 const PinCodeInput = ({ navigation }) => {

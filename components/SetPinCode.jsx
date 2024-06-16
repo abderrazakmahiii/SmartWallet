@@ -132,7 +132,6 @@ const SetPinCodeScreen = ({ navigation }) => {
       return;
     }
 
-    // Add code to handle the submission of pin codes
     console.log('Pin codes submitted:', pinCode);
     console.log('Confirm pin codes submitted:', confirmPinCode);
   };

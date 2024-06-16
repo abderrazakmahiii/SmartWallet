@@ -18,7 +18,6 @@ const SelectCard = ({ onCardSelect }) => {
     setModalVisible(false);
   };
 
-  // Function to mask the card number
   const maskCardNumber = (number) => {
     const visibleDigits = number.slice(-3);
     const maskedDigits = number.slice(0, -3).replace(/\d/g, '*');
@@ -41,7 +40,6 @@ const SelectCard = ({ onCardSelect }) => {
           source={cardLogos[cardData.find(card => card.number === selectedCard).type]}
           style={styles.selectedCardLogo}
         />
-        {/* Dropdown menu arrow icon */}
         <AntDesign name="down" size={24} color="white" style={styles.dropdownArrow} />
       </TouchableOpacity>
       <Modal
@@ -90,7 +88,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
   dropdownArrow: {
-    marginLeft: 'auto', // Align to the right
+    marginLeft: 'auto',
   },
   modalContainer: {
     flex: 1,

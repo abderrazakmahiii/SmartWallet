@@ -1,0 +1,75 @@
+{
+    "transactionHistory": [
+      {
+        "transactionId": "TXN20240601001",
+        "name": "Company XYZ",
+        "description": "Salary Deposit",
+        "date": "2024-06-01T09:00:00Z",
+        "amount": 2500.00
+      },
+      {
+        "transactionId": "TXN20240602123",
+        "name": "Supermarket ABC",
+        "description": "Grocery Store Purchase",
+        "date": "2024-06-02T14:30:00Z",
+        "amount": -75.50
+      },
+      {
+        "transactionId": "TXN20240603002",
+        "name": "Netflix",
+        "description": "Monthly Subscription",
+        "date": "2024-06-03T07:00:00Z",
+        "amount": -19.99
+      },
+      {
+        "transactionId": "TXN20240604100",
+        "name": "John",
+        "description": "Received Transfer",
+        "date": "2024-06-04T12:00:00Z",
+        "amount": 300.00
+      },
+      {
+        "transactionId": "TXN20240605111",
+        "name": "Restaurant Bella Italia",
+        "description": "Restaurant Bill",
+        "date": "2024-06-05T20:00:00Z",
+        "amount": -45.00
+      },
+      {
+        "transactionId": "TXN20240606022",
+        "name": "Utility Company",
+        "description": "Utility Bill Payment",
+        "date": "2024-06-06T10:00:00Z",
+        "amount": -100.00
+      },
+      {
+        "transactionId": "TXN20240607133",
+        "name": "Amazon",
+        "description": "Online Purchase",
+        "date": "2024-06-07T18:30:00Z",
+        "amount": -55.75
+      },
+      {
+        "transactionId": "TXN20240608003",
+        "name": "Savings Account",
+        "description": "Transfer to Savings",
+        "date": "2024-06-08T08:00:00Z",
+        "amount": -500.00
+      },
+      {
+        "transactionId": "TXN20240609144",
+        "name": "Alice",
+        "description": "Received Transfer from Friend",
+        "date": "2024-06-09T15:45:00Z",
+        "amount": 75.00
+      },
+      {
+        "transactionId": "TXN20240610004",
+        "name": "FitLife Gym",
+        "description": "Gym Membership",
+        "date": "2024-06-10T06:00:00Z",
+        "amount": -40.00
+      }
+    ]
+  }
+  

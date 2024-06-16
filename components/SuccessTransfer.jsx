@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
 const SuccessTransfer = ({ navigation }) => {
   const handleGoHome = () => {
-    navigation.navigate('Home'); // Navigate to the Home screen
+    navigation.navigate('Home'); 
   };
 
   return (

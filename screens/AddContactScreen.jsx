@@ -1,4 +1,3 @@
-// screens/AddContactScreen.jsx
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import AddContact from '../components/AddContact';

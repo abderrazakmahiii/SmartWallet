@@ -1,4 +1,3 @@
-// components/ForgotPassword.jsx
 import React, { useState } from 'react';
 import { View, TextInput, TouchableOpacity, Text, StyleSheet } from 'react-native';
 
@@ -11,7 +10,6 @@ const ForgotPassword = () => {
       setError('Please enter a valid email address.');
     } else {
       setError('');
-      // Logic to send the code to the provided email address
       console.log('Code sent to:', email);
     }
   };

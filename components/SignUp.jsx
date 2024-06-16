@@ -84,9 +84,7 @@ const SignUp = () => {
       setError('Please agree to the terms and conditions');
       return;
     }
-    // If all validations pass, proceed with signup
     setError(null);
-    // Implement your signup logic here
   };
 
   const onChangeDate = (event, selectedDate) => {
@@ -176,7 +174,6 @@ const SignUp = () => {
               display="default"
               onChange={onChangeDate}
               format="YYYY-MM-DD"
-              // Additional props for datepicker
             />
           )}
         </View>
@@ -214,7 +211,6 @@ const SignUp = () => {
             }
           </TouchableOpacity>
         </View>
-        {/* Checkboxes for certification and terms */}
         <View style={styles.checkboxContainer}>
           <TouchableOpacity
             style={[styles.checkbox, certifyChecked ? styles.checked : null]}
@@ -234,7 +230,6 @@ const SignUp = () => {
           <Text style={styles.checkboxText}>I agree to the terms and conditions</Text>
         </View>
         {error && <Text style={styles.errorText}>{error}</Text>}
-        {/* Sign up button with arrow */}
         <TouchableOpacity style={styles.signUpButton} onPress={handleSignUp}>
           <Text style={styles.signUpButtonText}>Sign Up</Text>
           <MaterialIcons name="arrow-forward" size={24} color="white" />
@@ -250,10 +245,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingHorizontal: 20,
     paddingVertical: 40,
-    backgroundColor: '#000', // Set background color to black
+    backgroundColor: '#000',
   },
   startForFree: {
-    color: '#777', // Dark gray text color
+    color: '#777',
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 10,
@@ -265,11 +260,11 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   signInText: {
-    color: '#777', // Dark gray text color
+    color: '#777',
     marginBottom: 10,
   },
   signInLink: {
-    color: '#8000FF', // Purple text color
+    color: '#8000FF', 
     fontSize: 15,
     fontWeight: 'bold',
   },
@@ -277,11 +272,11 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   nameContainer: {
-    flexDirection: 'row', // Default for alignment
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginBottom: 10, // Maintain some space between fields
-    marginRight: 10, // Small space between input fields
+    marginBottom: 10, 
+    marginRight: 10, 
   },
   inputName: {
     flex: 1,
@@ -290,14 +285,14 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: '#484747',
     color: 'white',
-    marginRight: 5, // Small space between input fields
+    marginRight: 5,
   },
   fieldContainer: {
-    flexDirection: 'row', // Arrange email input and icon horizontally
+    flexDirection: 'row',
     alignItems: 'center',
   },
   fieldInput: {
-    flex: 1, // Take up remaining space in container
+    flex: 1, 
     height: 55,
     paddingHorizontal: 10,
     borderRadius: 10,
@@ -307,10 +302,10 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   signUpButton: {
-    backgroundColor: '#8000FF', // Purple button color
+    backgroundColor: '#8000FF', 
     borderRadius: 10,
     height: 55,
-    marginTop: 20, // Add space between sign-up button and previous input field
+    marginTop: 20,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',

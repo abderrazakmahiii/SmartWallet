@@ -1,4 +1,3 @@
-// components/CardCarousel.jsx
 import React, { useState, useRef, useEffect } from 'react';
 import { View, FlatList, StyleSheet, Dimensions } from 'react-native';
 import CardDetails from './CardDetails';
@@ -23,7 +22,7 @@ const CardCarousel = ({ cards, setSelectedCard }) => {
 
   const handleScroll = (event) => {
     const contentOffsetX = event.nativeEvent.contentOffset.x;
-    const selectedIndex = Math.round(contentOffsetX / 320); // Assuming each card is 320 in width
+    const selectedIndex = Math.round(contentOffsetX / 320);
     setSelectedCardIndex(selectedIndex);
   };
 
@@ -38,7 +37,7 @@ const CardCarousel = ({ cards, setSelectedCard }) => {
         keyExtractor={(item) => item.number}
         horizontal
         showsHorizontalScrollIndicator={false}
-        snapToInterval={320} // Assuming each card is 320 in width
+        snapToInterval={320}
         snapToAlignment={'center'}
         decelerationRate="fast"
         onMomentumScrollEnd={handleScroll}
@@ -59,7 +58,7 @@ const styles = StyleSheet.create({
   },
   indicatorContainer: {
     position: 'absolute',
-    bottom: -50, // Adjust this value to change the vertical position of the indicators
+    bottom: -50,
     left: 0,
     right: 0,
     flexDirection: 'row',

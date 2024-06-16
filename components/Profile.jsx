@@ -1,4 +1,3 @@
-// components/Profile.jsx
 import React, { useState, useEffect } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image, TextInput, Alert } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
@@ -10,7 +9,6 @@ const Profile = ({ navigation }) => {
   const [profileImage, setProfileImage] = useState(require('../imgs/profile.png'));
 
   useEffect(() => {
-    // Load profile data
     setProfile(profileData);
   }, []);
 
@@ -19,11 +17,9 @@ const Profile = ({ navigation }) => {
   };
 
   const handleDelete = () => {
-    // Handle delete action
   };
 
   const handleLogout = () => {
-    // Handle log out action
   };
 
   return (

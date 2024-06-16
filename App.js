@@ -7,7 +7,7 @@ import SignUpScreen from './screens/SignUpScreen';
 import EmailPhoneConfirmationScreen from './screens/EmailPhoneConfirmationScreen';
 import SetPinCodeScreen from './screens/SetPinCodeScreen'; 
 import HomeScreen from './screens/HomeScreen';
-import AddCardScreen from './screens/AddCardScreen'; // Import the AddCardScreen component
+import AddCardScreen from './screens/AddCardScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import ContactsScreen from './screens/ContactScreen';
 import AddContactScreen from './screens/AddContactScreen';
@@ -17,6 +17,8 @@ import PasswordRecoveringScreen from './screens/PasswordRecoveringScreen';
 import PinCodeInputScreen from './screens/PinCodeInputScreen';
 import ContactTransferScreen from './screens/ContactTransferScreen';
 import TransferStatusScreen from './screens/TransferStatusScreen';
+import NotificationsScreen from './screens/NotificationsScreen';
+import Test from './components/test';
 
 
 const Stack = createNativeStackNavigator();
@@ -25,12 +27,11 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {/* <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
-        <Stack.Screen name="SignUp" component={SignUpScreen} options={{ headerShown: false }} />
-        <Stack.Screen name="Confirmation" component={EmailPhoneConfirmationScreen} options={{ headerShown: false }} />
-        <Stack.Screen name="SetPinCode" component={SetPinCodeScreen} options={{ headerShown: false }} />*/}
-        {/* <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />  */}
-        {/* <Stack.Screen name="AddCard" component={AddCardScreen} options={{ headerShown: false }} />  */}
+        {/* <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} /> */}
+        {/* <Stack.Screen name="SignUp" component={SignUpScreen} options={{ headerShown: false }} /> */}
+        {/* <Stack.Screen name="Confirmation" component={EmailPhoneConfirmationScreen} options={{ headerShown: false }} /> */}
+        {/* <Stack.Screen name="SetPinCode" component={SetPinCodeScreen} options={{ headerShown: false }} /> */}
+        {/* <Stack.Screen name="AddCard" component={AddCardScreen} options={{ headerShown: false }} /> */}
         {/* <Stack.Screen
           name="Profile"
           component={ProfileScreen}
@@ -68,6 +69,9 @@ const App = () => {
       />  */}
       {/* <Stack.Screen name="ContactTransfer" component={ContactTransferScreen} options={{ headerShown: false }} />  */}
       <Stack.Screen name="TransferStatus" component={TransferStatusScreen} options={{ headerShown: false }} /> 
+      {/* <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />  */}
+      {/* <Stack.Screen name="Notifications" component={NotificationsScreen} options={{ headerShown: false }} />  */}
+      {/* <Stack.Screen name="Test" component={Test} options={{ headerShown: false }} /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );

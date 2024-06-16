@@ -14,7 +14,6 @@ const Login = () => {
       setError('Please enter your email or phone number and password.');
       return;
     }
-    // Implement login logic here (placeholder for now)
     alert('Login functionality under development!');
   };
 
@@ -59,7 +58,7 @@ const Login = () => {
       <TouchableHighlight 
         style={styles.button}
         onPress={handleLogin}
-        underlayColor="#6F00D2" // Change the underlay color to give feedback when pressed
+        underlayColor="#6F00D2"
       >
         <Text style={styles.buttonText}>Log In</Text>
       </TouchableHighlight>
@@ -74,7 +73,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingHorizontal: 20,
     paddingVertical: 40,
-    backgroundColor: '#000', // Set background color to black
+    backgroundColor: '#000',
   },
   title: {
     fontSize: 24,
@@ -94,7 +93,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginBottom: 10,
     backgroundColor: '#484747',
-    color: 'white', // Set text color to white for all states
+    color: 'white',
   },
   passwordContainer: {
     position: 'relative',
@@ -119,13 +118,13 @@ const styles = StyleSheet.create({
     height: 55,
     marginBottom: 10,
     backgroundColor: '#8000FF',
-    justifyContent: 'center', // Center text vertically
-    alignItems: 'center', // Center text horizontally
+    justifyContent: 'center',
+    alignItems: 'center', 
   },
   buttonText: {
-    color: 'white', // Text color
-    fontSize: 18, // Text size
-    fontWeight: 'bold', // Text weight
+    color: 'white', 
+    fontSize: 18,
+    fontWeight: 'bold', 
   },
   signupText: {
     color: 'white',

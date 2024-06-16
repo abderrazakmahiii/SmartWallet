@@ -1,4 +1,3 @@
-// components/AddContact.jsx
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
@@ -50,8 +49,6 @@ const AddContact = ({ navigation }) => {
 
   const handleSubmit = () => {
     if (validateForm()) {
-      // Handle submit action
-      // Add logic to save the new contact
       console.log('Form submitted successfully!');
     }
   };

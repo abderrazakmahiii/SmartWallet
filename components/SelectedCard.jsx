@@ -1,24 +1,46 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 
 const SelectedCard = ({ balance, lastRefresh }) => {
+  const showDeleteAlert = () => {
+    Alert.alert(
+      "Confirm Deletion",
+      "Are you sure you want to continue?",
+      [
+        {
+          text: "Cancel",
+          onPress: () => console.log("Deletion cancelled"),
+          style: "cancel"
+        },
+        {
+          text: "Continue",
+          onPress: () => console.log("Card removed"),
+          style: "destructive"
+        }
+      ],
+      { cancelable: true }
+    );
+  };
+
   return (
-    <View style={styles.container}>
-      <View style={styles.leftContent}>
-        <Text style={styles.balanceText}>Your Balance</Text>
-        <Text style={styles.balanceAmount}>{balance}</Text>
-      </View>
-      <View style={styles.rightContent}>
-        <View style={styles.iconsContainer}>
-          <TouchableOpacity onPress={() => console.log('Refreshing...')}>
-            <AntDesign name="reload1" size={24} color="white" style={styles.icon} />
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => console.log('Removing card...')}>
-            <AntDesign name="delete" size={24} color="white" style={styles.icon} />
-          </TouchableOpacity>
+    <View>
+      <View style={styles.container}>
+        <View style={styles.leftContent}>
+          <Text style={styles.balanceText}>Your Balance</Text>
+          <Text style={styles.balanceAmount}>{balance}</Text>
         </View>
-        <Text style={styles.refreshText}>Last Refreshed {lastRefresh}</Text>
+        <View style={styles.rightContent}>
+          <View style={styles.iconsContainer}>
+            <TouchableOpacity onPress={() => console.log('Refreshing...')}>
+              <AntDesign name="reload1" size={24} color="white" style={styles.icon} />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={showDeleteAlert}>
+              <AntDesign name="delete" size={24} color="white" style={styles.icon} />
+            </TouchableOpacity>
+          </View>
+          <Text style={styles.refreshText}>Last Refreshed {lastRefresh}</Text>
+        </View>
       </View>
     </View>
   );

@@ -29,8 +29,8 @@ const styles = StyleSheet.create({
   },
   backButton: {
     position: 'absolute',
-    top: 40, // Adjust as needed
-    left: 20, // Adjust as needed
+    top: 40, 
+    left: 20,
   },
   image: {
     width: 200,

@@ -8,24 +8,18 @@ const AddCard = ({ navigation }) => {
   };
 
   const handleAddCard = () => {
-    // Handle adding a new card logic
+
   };
 
-  // State for storing the formatted expiration date
   const [expirationDate, setExpirationDate] = useState('');
 
-  // Function to format the expiration date
   const formatExpirationDate = (input) => {
-    // Remove any non-numeric characters from the input
     const numericValue = input.replace(/\D/g, '');
-
-    // Format the input as MM/YY
     return numericValue
-      .slice(0, 4) // Limit input to 4 characters
-      .replace(/(\d{2})(\d{1,2})/, '$1/$2'); // Automatically insert "/" after the second digit
+      .slice(0, 4)
+      .replace(/(\d{2})(\d{1,2})/, '$1/$2');
   };
 
-  // Event handler for expiration date input change
   const handleExpirationDateChange = (input) => {
     const formattedDate = formatExpirationDate(input);
     setExpirationDate(formattedDate);
@@ -56,7 +50,7 @@ const AddCard = ({ navigation }) => {
               keyboardType="numeric"
               onChangeText={handleExpirationDateChange}
               value={expirationDate}
-              maxLength={5} // Limit input to 5 characters
+              maxLength={5}
             />
           </View>
           <View style={styles.spaceBetween}><Text>{' '}</Text></View>

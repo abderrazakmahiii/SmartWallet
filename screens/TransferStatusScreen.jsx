@@ -5,7 +5,7 @@ import FailTransfer from '../components/FailTransfer';
 import NavigationBar from '../components/NavigationBar';
 
 const TransferStatusScreen = ({ navigation, success }) => {
-  success = false;
+  success = true;
   return (
     <View style={{ flex: 1 }}>
       {success ? <SuccessTransfer navigation={navigation} /> : <FailTransfer navigation={navigation} />}

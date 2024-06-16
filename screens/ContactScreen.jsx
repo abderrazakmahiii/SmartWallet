@@ -1,4 +1,3 @@
-// screens/ContactsScreen.jsx
 import React from 'react';
 import { View, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
 import Contacts from '../components/Contacts';
@@ -8,11 +7,9 @@ import NavigationBar from '../components/NavigationBar';
 import { AntDesign } from '@expo/vector-icons';
 
 const ContactsScreen = ({ navigation }) => {
-  // Sort contactsData by name
   const sortedContacts = contactsData.sort((a, b) => a.name.localeCompare(b.name));
 
   const handleAddContact = () => {
-    // Navigate to add contact screen or perform necessary action
   };
 
   return (
@@ -39,7 +36,7 @@ const styles = StyleSheet.create({
   },
   contactListContainer: {
     flexGrow: 1,
-    paddingBottom: 100, // Adjust as needed
+    paddingBottom: 100, 
   },
   addButton: {
     position: 'absolute',
